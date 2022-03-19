@@ -420,7 +420,7 @@ MonoBehaviour:
   videos:
   - {fileID: 32900000, guid: c25bb33bfb741434fbe21db69b8690c7, type: 3}
   - {fileID: 32900000, guid: 17abce2e95c6ebb42a01dd73941c64d6, type: 3}
-  animated: 0
+  animated: 1
   currentAnimation: 0
 --- !u!1 &1372718440
 GameObject:

@@ -11,10 +11,10 @@ public class Frame : MonoBehaviour
     public int currentAnimation;
     private VideoPlayer videoPlayer;
 
-    void Start()
+    void Awake()
     {
 
-        if (videos.Length > 0)
+        if (animated)
         {
 
             GameObject camera = GameObject.Find("Main Camera");
@@ -23,7 +23,7 @@ public class Frame : MonoBehaviour
             videoPlayer = camera.AddComponent<UnityEngine.Video.VideoPlayer>();
 
 
-            videoPlayer.playOnAwake = false;
+            videoPlayer.playOnAwake = true;
 
             videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.CameraNearPlane;
 
@@ -37,7 +37,6 @@ public class Frame : MonoBehaviour
             videoPlayer.isLooping = false;
 
             videoPlayer.loopPointReached += EndReached;
-            Play();
         }
 
 
@@ -46,6 +45,11 @@ public class Frame : MonoBehaviour
     {
         videoPlayer.clip = videos[currentAnimation];
         videoPlayer.Play();
+    }
+    public void Stop()
+    {
+
+        videoPlayer.Stop();
     }
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
