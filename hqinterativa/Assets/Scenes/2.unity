@@ -1227,6 +1227,10 @@ PrefabInstance:
       value: Screen
       objectReference: {fileID: 0}
     - target: {fileID: 8699655661694674228, guid: 2a1da230ede6f1d4ea9a0efee5f25363, type: 3}
+      propertyPath: PreviousScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699655661694674228, guid: 2a1da230ede6f1d4ea9a0efee5f25363, type: 3}
       propertyPath: Drawings.Array.size
       value: 4
       objectReference: {fileID: 0}
