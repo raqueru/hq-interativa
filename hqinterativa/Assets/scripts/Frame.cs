@@ -32,7 +32,7 @@ public class Frame : MonoBehaviour
 
 
 
-            videoPlayer.frame = 100;
+            videoPlayer.frame = 0;
 
             videoPlayer.isLooping = false;
 

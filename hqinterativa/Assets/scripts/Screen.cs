@@ -60,6 +60,12 @@ public class Screen : MonoBehaviour
                     Drawings[currentDrawing].currentAnimation++;
 
                 }
+                else
+                {
+                    Drawings[currentDrawing].Stop();
+
+                    currentDrawing++;
+                }
             }
             else
             {
