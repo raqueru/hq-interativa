@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class Frame : MonoBehaviour
 {
 
-    public VideoClip[] videos;
+    public VideoClip video;
     public bool animated;
-    public int currentAnimation;
     private VideoPlayer videoPlayer;
+    public bool played = false;
+
     private RawImage image;
     RenderTexture renderTexture;
 
@@ -32,14 +33,14 @@ public class Frame : MonoBehaviour
             image.texture = renderTexture;
 
 
-            // videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.RenderTexture;
+            videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.CameraNearPlane;
 
-            // videoPlayer.targetTexture = renderTexture;
+            videoPlayer.targetTexture = renderTexture;
 
 
-            // videoPlayer.aspectRatio = VideoAspectRatio.Stretch;
-            videoPlayer.clip = videos[currentAnimation];
-            videoPlayer.targetCameraAlpha = 0.5F;
+            videoPlayer.aspectRatio = VideoAspectRatio.FitInside;
+            videoPlayer.clip = video;
+            videoPlayer.targetCameraAlpha = 1F;
 
 
             videoPlayer.frame = 0;
@@ -50,7 +51,7 @@ public class Frame : MonoBehaviour
             videoPlayer.loopPointReached += EndReached;
 
 
-            videoPlayer.playOnAwake = true;
+            Play();
 
         }
 
@@ -58,8 +59,9 @@ public class Frame : MonoBehaviour
     }
     public void Play()
     {
-        videoPlayer.clip = videos[currentAnimation];
+        videoPlayer.clip = video;
         videoPlayer.Play();
+
     }
     public void Stop()
     {

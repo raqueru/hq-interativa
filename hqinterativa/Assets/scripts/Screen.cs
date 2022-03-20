@@ -11,7 +11,7 @@ public class Screen : MonoBehaviour
 
     public Frame[] Drawings;
     private int maxDrawings;
-    private int currentDrawing;
+    public int currentDrawing;
     private ScreensManager screenManager;
 
     void Awake()
@@ -22,12 +22,14 @@ public class Screen : MonoBehaviour
         if (!screenManager.returned)
         {
             currentDrawing = 0;
+            NextDrawing();
         }
         else
         {
             for (int i = 0; i < maxDrawings; i++)
             {
                 NextDrawing();
+
 
             }
 
@@ -54,17 +56,21 @@ public class Screen : MonoBehaviour
             Drawings[currentDrawing].gameObject.SetActive(true);
             if (Drawings[currentDrawing].animated)
             {
-                if (Drawings[currentDrawing].currentAnimation < Drawings[currentDrawing].videos.Length)
+                if (!Drawings[currentDrawing].played)
                 {
+
                     Drawings[currentDrawing].Play();
-                    Drawings[currentDrawing].currentAnimation++;
+                    Drawings[currentDrawing].played = true;
+
 
                 }
                 else
                 {
-                    Drawings[currentDrawing].Stop();
+                    Drawings[currentDrawing].gameObject.SetActive(false);
 
                     currentDrawing++;
+                    NextDrawing();
+                    Debug.Log("A");
                 }
             }
             else
@@ -89,8 +95,14 @@ public class Screen : MonoBehaviour
     {
         if (currentDrawing > 0)
         {
-            Drawings[currentDrawing - 1].gameObject.SetActive(false);
+            Drawings[currentDrawing].gameObject.SetActive(false);
+            Drawings[currentDrawing].Stop();
+            Drawings[currentDrawing].played = false;
             currentDrawing--;
+            Drawings[currentDrawing].gameObject.SetActive(true);
+
+            Drawings[currentDrawing].Play();
+
         }
         else
         {
