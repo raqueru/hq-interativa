@@ -28,10 +28,12 @@ public class Screen : MonoBehaviour
         {
             for (int i = 0; i < maxDrawings; i++)
             {
+
                 NextDrawing();
-
-
             }
+
+
+
 
         }
 
