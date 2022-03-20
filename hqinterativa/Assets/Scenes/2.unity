@@ -203,6 +203,7 @@ MonoBehaviour:
   video: {fileID: 32900000, guid: ba9512adf8dd1ca40917d3c61b2b54b7, type: 3}
   animated: 1
   played: 0
+  choice: 0
 --- !u!222 &5528864
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -291,6 +292,7 @@ MonoBehaviour:
   video: {fileID: 32900000, guid: ff3603f192520cb498e57fb720f118e3, type: 3}
   animated: 1
   played: 0
+  choice: 0
 --- !u!222 &34219843
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -698,6 +700,7 @@ MonoBehaviour:
   video: {fileID: 32900000, guid: 0b8d33f9a608d6240be13ae48799cf10, type: 3}
   animated: 1
   played: 0
+  choice: 1
 --- !u!222 &1550639035
 CanvasRenderer:
   m_ObjectHideFlags: 0
