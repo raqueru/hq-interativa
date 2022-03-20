@@ -44,11 +44,17 @@ public class Screen : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            NextDrawing();
+            if (!Drawings[currentDrawing].choice)
+            {
+                NextDrawing();
+            }
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            PreviousDrawing();
+            if (!Drawings[currentDrawing].choice)
+            {
+                PreviousDrawing();
+            }
         }
     }
     void NextDrawing()

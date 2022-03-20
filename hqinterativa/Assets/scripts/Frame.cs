@@ -11,7 +11,7 @@ public class Frame : MonoBehaviour
     public bool animated;
     private VideoPlayer videoPlayer;
     public bool played = false;
-
+    public bool choice = false;
     private RawImage image;
     RenderTexture renderTexture;
 

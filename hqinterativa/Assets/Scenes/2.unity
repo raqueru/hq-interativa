@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dc8860fa84b5940be046cb2b92929c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  video: {fileID: 32900000, guid: 49d226dd62ae9404cadaba532792a58d, type: 3}
+  video: {fileID: 32900000, guid: ba9512adf8dd1ca40917d3c61b2b54b7, type: 3}
   animated: 1
   played: 0
 --- !u!222 &5528864
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dc8860fa84b5940be046cb2b92929c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  video: {fileID: 32900000, guid: b7a215d514ab6534e9074eac299731ee, type: 3}
+  video: {fileID: 32900000, guid: ff3603f192520cb498e57fb720f118e3, type: 3}
   animated: 1
   played: 0
 --- !u!222 &34219843
@@ -343,94 +343,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &534448133
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 534448134}
-  - component: {fileID: 534448137}
-  - component: {fileID: 534448136}
-  - component: {fileID: 534448135}
-  m_Layer: 5
-  m_Name: 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &534448134
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534448133}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 543880824}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98.5397, y: 10.9489}
-  m_SizeDelta: {x: 1939.4081, y: 1085.3975}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &534448135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534448133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 0}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!114 &534448136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534448133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24dc8860fa84b5940be046cb2b92929c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  video: {fileID: 32900000, guid: 8c7b3aabd7c035b4cb44800303516055, type: 3}
-  animated: 1
-  played: 0
---- !u!222 &534448137
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534448133}
-  m_CullTransparentMesh: 1
 --- !u!1 &543880823
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +373,6 @@ Transform:
   - {fileID: 34219840}
   - {fileID: 5528861}
   - {fileID: 1550639032}
-  - {fileID: 534448134}
   m_Father: {fileID: 683771449}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -692,7 +603,6 @@ MonoBehaviour:
   - {fileID: 34219842}
   - {fileID: 5528863}
   - {fileID: 1550639034}
-  - {fileID: 534448136}
   currentDrawing: 0
 --- !u!4 &1160381608
 Transform:
@@ -785,7 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dc8860fa84b5940be046cb2b92929c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  video: {fileID: 32900000, guid: cdf9f81d9fe68984e97337f3a9e9cc42, type: 3}
+  video: {fileID: 32900000, guid: 0b8d33f9a608d6240be13ae48799cf10, type: 3}
   animated: 1
   played: 0
 --- !u!222 &1550639035
