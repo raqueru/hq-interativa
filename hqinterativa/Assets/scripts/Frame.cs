@@ -32,12 +32,12 @@ public class Frame : MonoBehaviour
             image.texture = renderTexture;
 
 
-            videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.RenderTexture;
+            // videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.RenderTexture;
 
-            videoPlayer.targetTexture = renderTexture;
+            // videoPlayer.targetTexture = renderTexture;
 
 
-            videoPlayer.aspectRatio = VideoAspectRatio.FitInside;
+            // videoPlayer.aspectRatio = VideoAspectRatio.Stretch;
             videoPlayer.clip = videos[currentAnimation];
             videoPlayer.targetCameraAlpha = 0.5F;
 
@@ -49,8 +49,8 @@ public class Frame : MonoBehaviour
 
             videoPlayer.loopPointReached += EndReached;
 
-            Debug.Log(videoPlayer.texture);
 
+            videoPlayer.playOnAwake = true;
 
         }
 
