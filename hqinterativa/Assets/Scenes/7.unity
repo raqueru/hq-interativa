@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dc8860fa84b5940be046cb2b92929c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  video: {fileID: 32900000, guid: 428f77a9cc7f7894d8c5371e26edd8d1, type: 3}
+  video: {fileID: 32900000, guid: d791e12ca6cdadc4d8f211a840990cc6, type: 3}
   animated: 1
   played: 0
   choice: 0
