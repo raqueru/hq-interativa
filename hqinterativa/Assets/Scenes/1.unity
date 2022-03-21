@@ -203,6 +203,7 @@ MonoBehaviour:
   video: {fileID: 32900000, guid: cdf9f81d9fe68984e97337f3a9e9cc42, type: 3}
   animated: 1
   played: 0
+  choice: 0
 --- !u!222 &329990638
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -313,7 +314,9 @@ MonoBehaviour:
   - {fileID: 1052732836}
   - {fileID: 329990637}
   - {fileID: 998757728}
+  buttons: []
   currentDrawing: 0
+  choice: 0
 --- !u!4 &739106976
 Transform:
   m_ObjectHideFlags: 0
@@ -416,6 +419,7 @@ MonoBehaviour:
   video: {fileID: 32900000, guid: b7a215d514ab6534e9074eac299731ee, type: 3}
   animated: 1
   played: 0
+  choice: 0
 --- !u!1 &998757725
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +500,7 @@ MonoBehaviour:
   video: {fileID: 32900000, guid: 8c7b3aabd7c035b4cb44800303516055, type: 3}
   animated: 1
   played: 0
+  choice: 0
 --- !u!222 &998757729
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -584,6 +589,7 @@ MonoBehaviour:
   video: {fileID: 32900000, guid: 49d226dd62ae9404cadaba532792a58d, type: 3}
   animated: 1
   played: 0
+  choice: 0
 --- !u!222 &1052732837
 CanvasRenderer:
   m_ObjectHideFlags: 0

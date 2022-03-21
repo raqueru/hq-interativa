@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+
 
 public class Screen : MonoBehaviour
 {
@@ -10,14 +13,17 @@ public class Screen : MonoBehaviour
     public string PreviousScene;
 
     public Frame[] Drawings;
+
     private int maxDrawings;
     public int currentDrawing;
+    public bool choice;
     private ScreensManager screenManager;
 
-    void Awake()
+    async void Awake()
     {
         screenManager = FindObjectOfType<ScreensManager>();
         maxDrawings = Drawings.Length;
+
 
         if (!screenManager.returned)
         {
@@ -31,10 +37,6 @@ public class Screen : MonoBehaviour
 
                 NextDrawing();
             }
-
-
-
-
         }
 
     }
@@ -44,23 +46,31 @@ public class Screen : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            if (!Drawings[currentDrawing].choice)
+
+            if (!choice)
             {
                 NextDrawing();
             }
+
+
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (!Drawings[currentDrawing].choice)
+            if (!choice)
             {
                 PreviousDrawing();
             }
+
         }
     }
     void NextDrawing()
     {
         if (currentDrawing < maxDrawings)
         {
+            if (Drawings[currentDrawing].choice)
+            {
+                choice = true;
+            }
             Drawings[currentDrawing].gameObject.SetActive(true);
             if (Drawings[currentDrawing].animated)
             {
@@ -77,8 +87,11 @@ public class Screen : MonoBehaviour
                     Drawings[currentDrawing].gameObject.SetActive(false);
 
                     currentDrawing++;
+
+
                     NextDrawing();
-                    Debug.Log("A");
+
+
                 }
             }
             else
@@ -92,13 +105,16 @@ public class Screen : MonoBehaviour
         {
             if (NextScene != "")
             {
-                screenManager.NextScene(NextScene);
+                GoToNextScene(NextScene);
             }
         }
     }
 
 
-
+    public void GoToNextScene(string NextScene)
+    {
+        screenManager.NextScene(NextScene);
+    }
     void PreviousDrawing()
     {
         if (currentDrawing > 0)
