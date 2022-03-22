@@ -28,7 +28,14 @@ public class Screen : MonoBehaviour
         if (!screenManager.returned)
         {
             currentDrawing = 0;
-            NextDrawing();
+            if (Drawings[currentDrawing].animated)
+            {
+                NextDrawing();
+            }
+            else
+            {
+                Drawings[currentDrawing].gameObject.SetActive(true);
+            }
         }
         else
         {
@@ -97,6 +104,9 @@ public class Screen : MonoBehaviour
             else
             {
                 currentDrawing++;
+                NextDrawing();
+
+
             }
 
 
@@ -119,13 +129,20 @@ public class Screen : MonoBehaviour
     {
         if (currentDrawing > 0)
         {
-            Drawings[currentDrawing].gameObject.SetActive(false);
-            Drawings[currentDrawing].Stop();
-            Drawings[currentDrawing].played = false;
-            currentDrawing--;
-            Drawings[currentDrawing].gameObject.SetActive(true);
+            if (Drawings[currentDrawing].animated)
+            {
+                Drawings[currentDrawing].gameObject.SetActive(false);
+                Drawings[currentDrawing].Stop();
+                Drawings[currentDrawing].played = false;
+                currentDrawing--;
+                Drawings[currentDrawing].gameObject.SetActive(true);
 
-            Drawings[currentDrawing].Play();
+                Drawings[currentDrawing].Play();
+            }
+            else
+            {
+                Drawings[currentDrawing].gameObject.SetActive(false);
+            }
 
         }
         else
@@ -142,5 +159,11 @@ public class Screen : MonoBehaviour
     public void Choice(string NextScene)
     {
         screenManager.NextScene(NextScene);
+    }
+
+
+    public void Quit()
+    {
+        screenManager.Quit();
     }
 }

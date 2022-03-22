@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92195f16f06990940ac4b09a9e224cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: 
+  NextScene: 11.1
   PreviousScene: 
   Drawings:
   - {fileID: 177830761}
